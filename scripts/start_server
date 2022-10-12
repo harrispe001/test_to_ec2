@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /home/ubuntu/Octoberproject/octoberwebsite/frontend
+npm run build
+cd ..
+virtualenv test
+source test/bin/activate
+pip install django-cors-headers==3.13.0
+pip install djangorestframework==3.14.0
+pip install django
+python manage.py runserver 0.0.0.0:80
+
